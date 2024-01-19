@@ -1,0 +1,2 @@
+
+set(OPENLANDS_SOURCES src/main.c PARENT_SCOPE)

@@ -15,8 +15,8 @@ size = os.path.getsize(embed_file)
 
 with open(embed_file, 'rb') as f:
     with open(embed_c, 'w') as output_c:
-        output_c.write('#include "../../embed.h"\n')
-        output_c.write(f'Embed {struct_name} = {{{size}, (const uint8_t[]) {{')
+        output_c.write('#include "../embed.h"\n')
+        output_c.write(f'Embed res_{struct_name} = {{{size}, (const uint8_t[]) {{')
         while 1:
             chunk = f.read(chunk_size)
             if not chunk:
